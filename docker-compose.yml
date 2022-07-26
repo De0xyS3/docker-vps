@@ -1,14 +1,22 @@
 version: '3.8'
 services:
   vps:
-    container_name: PruebaVPS
-    image: vps
+    container_name: VPSMenu
+    image: wolfportuguez/vpsmenu
     ports:
     - "81:81"
     - "80:80"
     - "22:7050"
     - "443:443"
     - "8080:8080"
+# EXPOSE 81/tcp
+# EXPOSE 22/tcp
+# EXPOSE 80/tcp
+# EXPOSE 8080/tcp
+# EXPOSE 443/tcp
+# EXPOSE 90/tcp
+# EXPOSE 7300/udp
+# EXPOSE 7300/tcp
     user: root
     environment:
       - HOSTNAME=VPS
