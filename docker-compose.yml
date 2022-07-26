@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  vps:
+    container_name: PruebaVPS
+    image: vps
+    ports:
+    - "81:81"
+    - "80:80"
+    - "22:7050"
+    - "443:443"
+    - "8080:8080"
+    user: root
+    environment:
+      - HOSTNAME=VPS
+
